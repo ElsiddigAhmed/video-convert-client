@@ -197,6 +197,11 @@ body::after {
     border: 0;
     box-shadow: 0px 0px 10px #0000000a;
 }
+
+.extension .custom-select:focus {
+    outline:none;
+    border: 0;
+}
 .custom-select option {
     border: 0;
 }
@@ -252,6 +257,26 @@ body::after {
   display: none;
   width: 100%;
 }
+.load {
+  text-align: center;
+}
+.load p {
+  margin:30px 0;
+}
+footer {
+  text-align: center;
+}
+
+footer span  {
+color: #6b6b6b7e;
+font-size: .9rem;
+padding: 20px;
+}
+footer span  a,
+footer span  a:hover {
+  color: #35a2e2;
+}
+
 /* ==== end style main ==== */
 
 /*  media */
