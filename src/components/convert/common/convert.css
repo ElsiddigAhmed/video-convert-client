@@ -1,0 +1,287 @@
+/*  ====
+ * project name  ===> convert-video
+ * Design by    ===> aboabker hilal
+ * start work   ===> 29/8/2020
+ * main color   ===> #35a2e2
+ * font-color   ===> #fff
+ * font-family  ===> "Tajawal";
+
+==== */
+
+/* ====  start general setting ==== */
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: right;
+  background-color: #d6e8ea45;
+  position: relative;
+}
+
+ul li {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+  color: #71818a;
+  text-transform: capitalize;
+}
+
+small {
+  color: #6b6b6b7e;
+}
+
+
+/* ==== end  general setting ==== */
+
+
+
+
+/* ==== start style main ==== */
+
+main {
+    width: 60%;
+    margin: 100px auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 100;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    bottom:0;
+    left: 0;
+    background-image: url('../../../image/one.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    z-index: 0;
+    height: 216px;
+    margin: 0 auto;
+    animation: move 5s linear infinite;
+}
+body::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 80%;
+    background-image: url('../../../image/two.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    z-index: 0;
+    height: 216px;
+    margin: 0 auto;
+    animation: move 5s linear infinite;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.intro {
+  margin-top: 50px;
+}
+
+.choose-file {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
+}
+.input-file {
+  width: 100%;
+}
+.file {
+    display: flex;
+    justify-content: center;
+}
+.file-drop-area {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 25px;
+  border: 2px dashed #35a2e2;
+  border-radius: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+
+}
+.file-drop-area.is-active {
+  background-color: #35a2e252;
+}
+
+.fake-btn {
+  flex-shrink: 0;
+  color: #fff;
+  background-color: #35a2e2;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.file-msg {
+  font-size: small;
+  font-weight: 300;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  color: #0b0c0cab;
+  letter-spacing: 1px;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.file-input:focus {
+  outline: none;
+}
+
+.convert {
+  margin: 10px ;
+}
+
+
+
+.extension {
+    width: 100%;
+}
+
+.extension .custom-select {
+    color: #35a2e2;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    box-shadow: 0px 0px 10px #0000000a;
+}
+.custom-select option {
+    border: 0;
+}
+.preview {
+  width: 100%;
+}
+
+.preview .watch  {
+    border: 10px solid #ffffff;
+    box-shadow: 0px 0px 20px 0px #0000000d;
+}
+
+.preview .watch video {
+  width: 100%;
+}
+
+ .download {
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 0;
+    background-color: #35a2e2;
+    color: #fff;
+    width: auto;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.1rem;
+    display: block;
+    margin: 30px 0 0;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    transition: all 650ms ease;
+}
+.download:focus {
+  outline: none;
+  border: 0;
+  box-shadow: 0;
+}
+
+.download:hover {
+  opacity: .8;
+}
+.after-chose {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.after-chose .watch-now {
+  display: none;
+}
+/* ==== end style main ==== */
+
+/*  media */
+
+@media(max-width:992px){
+  main {
+    width: 90%;
+  }
+  .container {
+    width: 90%;
+  }
+  .file {
+    width: 100%;
+  }
+  .choose-file {
+    flex-direction: column;
+  }
+  body::before {
+      width: 100%;
+  }
+  body::after {
+      width: 100%;
+  }
+}
+
+@keyframes move {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
