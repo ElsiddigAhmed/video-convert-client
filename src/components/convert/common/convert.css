@@ -250,6 +250,7 @@ body::after {
 
 .after-chose .watch-now {
   display: none;
+  width: 100%;
 }
 /* ==== end style main ==== */
 
