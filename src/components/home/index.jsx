@@ -49,12 +49,15 @@ export const Home = () => {
   });
 
   useEffect(() => {
-    confirm({
-      text:
-        "Thanks for using our website to convert your videos, we would tell you that we will not store your videos after conversion so be sure about that. When you upload your video we start processing, after our api finishing conversion we delete the old video, then we wait until you download the new version of your video then we delete it after downloading is finished.",
-      buttonTitle: "I UNDERSTAND THAT",
-      callback: () => {},
-    });
+    if (localStorage.getItem("accepted") === "false")
+      confirm({
+        text:
+          "Thanks for using our website to convert your videos, we would tell you that we will not store your videos after conversion so be sure about that. When you upload your video we start processing, after our api finishing conversion we delete the old video, then we wait until you download the new version of your video then we delete it after downloading is finished.",
+        buttonTitle: "I UNDERSTAND THAT",
+        callback: () => {
+          localStorage.setItem("accepted", "true");
+        },
+      });
   }, []);
 
   receiveStream("video/downloadable", function (data) {
