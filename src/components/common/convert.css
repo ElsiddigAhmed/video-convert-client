@@ -10,8 +10,6 @@
 
 /* ====  start general setting ==== */
 
-
-
 * {
   padding: 0;
   margin: 0;
@@ -19,10 +17,16 @@
   box-sizing: border-box;
 }
 
+._3Lu7P {
+  z-index: 1000000;
+}
+
 body {
-  text-align: right;
+  /* text-align: right; */
   background-color: #d6e8ea45;
-  position: relative;
+  /* position: relative; */
+  padding: 20px;
+  overflow: hidden;
 }
 
 ul li {
@@ -34,7 +38,6 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
-
 
 h1,
 h2,
@@ -50,54 +53,50 @@ small {
   color: #6b6b6b7e;
 }
 
-
 /* ==== end  general setting ==== */
-
-
-
 
 /* ==== start style main ==== */
 
 main {
-    width: 60%;
-    margin: 100px auto;
-    background-color: #fff;
-    text-align: center;
-    padding: 20px;
-    border-radius: 6px;
-    position: relative;
-    z-index: 100;
+  width: 60%;
+  margin: 100px auto;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  position: relative;
+  z-index: 100;
 }
 
 body::before {
-    position: absolute;
-    content: "";
-    bottom:0;
-    left: 0;
-    background-image: url('../../../image/one.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 500px;
-    z-index: 0;
-    height: 216px;
-    margin: 0 auto;
-    animation: move 5s linear infinite;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-image: url("../../image/one.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  z-index: 0;
+  height: 216px;
+  margin: 0 auto;
+  animation: move 5s linear infinite;
 }
 body::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    right: 80%;
-    background-image: url('../../../image/two.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 500px;
-    z-index: 0;
-    height: 216px;
-    margin: 0 auto;
-    animation: move 5s linear infinite;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 80%;
+  background-image: url("../../image/two.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  z-index: 0;
+  height: 216px;
+  margin: 0 auto;
+  animation: move 5s linear infinite;
 }
 
 .container {
@@ -121,8 +120,8 @@ body::after {
   width: 100%;
 }
 .file {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .file-drop-area {
   position: relative;
@@ -137,7 +136,6 @@ body::after {
   border-radius: 3px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-
 }
 .file-drop-area.is-active {
   background-color: #35a2e252;
@@ -181,60 +179,58 @@ body::after {
 }
 
 .convert {
-  margin: 10px ;
+  margin: 10px;
 }
 
-
-
 .extension {
-    width: 100%;
+  width: 100%;
 }
 
 .extension .custom-select {
-    color: #35a2e2;
-    width: 100%;
-    padding: 15px;
-    border: 0;
-    box-shadow: 0px 0px 10px #0000000a;
+  color: #35a2e2;
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  box-shadow: 0px 0px 10px #0000000a;
 }
 
 .extension .custom-select:focus {
-    outline:none;
-    border: 0;
+  outline: none;
+  border: 0;
 }
 .custom-select option {
-    border: 0;
+  border: 0;
 }
 .preview {
   width: 100%;
 }
 
-.preview .watch  {
-    border: 10px solid #ffffff;
-    box-shadow: 0px 0px 20px 0px #0000000d;
+.preview .watch {
+  border: 10px solid #ffffff;
+  box-shadow: 0px 0px 20px 0px #0000000d;
 }
 
 .preview .watch video {
   width: 100%;
 }
 
- .download {
-    outline: none;
-    cursor: pointer;
-    border-radius: 2px;
-    border: 0;
-    background-color: #35a2e2;
-    color: #fff;
-    width: auto;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.1rem;
-    display: block;
-    margin: 30px 0 0;
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    transition: all 650ms ease;
+.download {
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 0;
+  background-color: #35a2e2;
+  color: #fff;
+  width: auto;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.1rem;
+  display: block;
+  margin: 30px 0 0;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  transition: all 650ms ease;
 }
 .download:focus {
   outline: none;
@@ -243,37 +239,37 @@ body::after {
 }
 
 .download:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 .after-chose {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .after-chose .watch-now {
-  display: none;
+  display: block;
   width: 100%;
 }
 .load {
   text-align: center;
 }
 .load p {
-  margin:30px 0;
+  margin: 30px 0;
 }
 footer {
   text-align: center;
 }
 
-footer span  {
-color: #6b6b6b7e;
-font-size: .9rem;
-padding: 20px;
+footer span {
+  color: #6b6b6b7e;
+  font-size: 0.9rem;
+  padding: 20px;
 }
-footer span  a,
-footer span  a:hover {
+footer span a,
+footer span a:hover {
   color: #35a2e2;
 }
 
@@ -281,7 +277,7 @@ footer span  a:hover {
 
 /*  media */
 
-@media(max-width:992px){
+@media (max-width: 992px) {
   main {
     width: 90%;
   }
@@ -295,19 +291,19 @@ footer span  a:hover {
     flex-direction: column;
   }
   body::before {
-      width: 100%;
+    width: 100%;
   }
   body::after {
-      width: 100%;
+    width: 100%;
   }
 }
 
 @keyframes move {
-    0% {
-        bottom: 0;
-    }
-    100% {
-        bottom: 100%;
-        opacity: 0;
-    }
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
 }

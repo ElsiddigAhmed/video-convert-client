@@ -1,9 +1,12 @@
-import React from 'react';
-import Conver from "./components/convert/index"
-
+import React from "react";
+import { EasyNotify } from "react-easy-notify";
+import { Home } from "./components/home";
 function App() {
   return (
-    <Conver />
+    <div>
+      <EasyNotify />
+      <Home />
+    </div>
   );
 }
 
